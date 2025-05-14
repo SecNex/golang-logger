@@ -1,5 +1,7 @@
 # SecNex Golang Logger
 
+Helper package for logging in Go.
+
 ## Installation
 
 ```bash
