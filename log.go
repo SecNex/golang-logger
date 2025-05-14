@@ -1,6 +1,8 @@
-package main
+package logger
 
-import "log"
+import (
+	"log"
+)
 
 type Level int
 
@@ -21,26 +23,34 @@ func NewLogger(level Level) *Logger {
 	}
 }
 
+func (l *Logger) SetLevel(level Level) {
+	l.Level = level
+}
+
+func (l *Logger) Create(level string, message string) {
+	log.Printf("[%s] %s", level, message)
+}
+
 func (l *Logger) DEBUG(message string) {
-	if l.Level > DEBUG {
-		log.Printf("[DEBUG] %s", message)
+	if l.Level <= DEBUG {
+		l.Create("DEBUG", message)
 	}
 }
 
 func (l *Logger) INFO(message string) {
-	if l.Level > INFO {
-		log.Printf("[INFO] %s", message)
+	if l.Level <= INFO {
+		l.Create("INFO", message)
 	}
 }
 
 func (l *Logger) WARN(message string) {
-	if l.Level > WARN {
-		log.Printf("[WARN] %s", message)
+	if l.Level <= WARN {
+		l.Create("WARN", message)
 	}
 }
 
 func (l *Logger) ERROR(message string) {
-	if l.Level > ERROR {
-		log.Printf("[ERROR] %s", message)
+	if l.Level <= ERROR {
+		l.Create("ERROR", message)
 	}
 }
