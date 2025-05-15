@@ -20,11 +20,11 @@ require github.com/secnex/gologger v0.1.0
 package main
 
 import (
-	"github.com/secnex/logger"
+	"github.com/secnex/gologger"
 )
 
 func main() {
-	logger := logger.NewLogger()
+	logger := gologger.NewLogger()
 	logger.INFO("Hello, World!")
 	logger.ERROR("Hello, World!")
 	logger.WARN("Hello, World!")
