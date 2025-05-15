@@ -11,7 +11,7 @@ go get github.com/secnex/logger
 **go.mod**
 
 ```go
-require github.com/secnex/logger v0.0.3
+require github.com/secnex/logger v0.0.4
 ```
 
 ## Usage
