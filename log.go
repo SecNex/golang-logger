@@ -1,4 +1,5 @@
-package main
+// Package golanglogger provides a simple leveled logging implementation
+package golanglogger
 
 import (
 	"log"
