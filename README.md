@@ -5,13 +5,13 @@ Helper package for logging in Go.
 ## Installation
 
 ```bash
-go get github.com/secnex/logger
+go get github.com/secnex/gologger
 ```
 
 **go.mod**
 
 ```go
-require github.com/secnex/logger v0.0.4
+require github.com/secnex/gologger v0.0.4
 ```
 
 ## Usage
